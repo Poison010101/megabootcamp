@@ -1,0 +1,43 @@
+*{ margin: 0px; padding: 0px; }
+#container{
+    width: 1140px;
+    min-height: 500px;
+    margin: auto auto;
+    background-color: rgb(151, 151, 150);
+}
+body{ background-color: black; }
+.row{ min-height: 5px; }
+.col100{ width: 100%; }
+.col75{  width: 75%; float: left; }
+.col50{  width: 50%; float: left; }
+.col25{ width: 25%; float: left; }
+.clear{ clear: both; }
+.imgres{width: 100%; height: auto;}
+
+@media only screen and (max-width: 740px) {
+    body{
+        background-color: red;
+    }
+
+    #container{
+        width: 720px;
+    }
+    .colmd100{ width: 100%; }
+    .colmd75{  width: 75%; float: left; }
+    .colmd50{  width: 50%; float: left; }
+    .colmd25{ width: 25%; float: left; }
+
+}
+
+@media only screen and (max-width: 340px) {
+    body{
+        background-color: green;
+    }
+    #container {
+        width: 320px;
+    }
+    .colsm100{ width: 100%; }
+    .colsm75{  width: 75%; float: left; }
+    .colsm50{  width: 50%; float: left; }
+    .colsm25{ width: 25%; float: left; }
+}
