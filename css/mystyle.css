@@ -13,6 +13,7 @@ body{ background-color: black; }
 .col25{ width: 25%; float: left; }
 .clear{ clear: both; }
 .imgres{width: 100%; height: auto;}
+.white { color: #fff; font-size: 15px;}
 
 @media only screen and (max-width: 740px) {
     body{
