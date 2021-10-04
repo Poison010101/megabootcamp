@@ -11,54 +11,9 @@
 <body>
     <div class="container">
         <!-- logo and banner section  -->
-        <div class="row">
-            <div class="col-xxl-2">
-                <img src="https://dummyimage.com/150x150/000/fff" alt="logo">
-            </div>
-            <div class="col-xxl-10">
-                <img src="https://dummyimage.com/1250x150/000/fff" alt="banner" class="img-fluid">
-            </div>
-        </div>
+        <?php include_once('inc_banner.php');?>
         <!-- logo and banner section  -->
-        <div class="row">
-            <div class="col-xxl-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-light" href="#">About</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Categories
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-light">Contact</a>
-                          </li>
-                        </ul>
-                        <form class="d-flex">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success text-light" type="submit">Search</button>
-                        </form>
-                      </div>
-                    </div>
-                  </nav>
-            </div>
-        </div>
+       <?php include('inc_menu.php');?>
 
         <div class="row">
             <!-- slider open -->
@@ -127,11 +82,7 @@
 
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    footer will be here
-                </div>
-            </div>
+           <?php require_once('inc_footer.php');?>
         </div>
     </div>
 
