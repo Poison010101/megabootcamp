@@ -3,25 +3,27 @@ include_once('inc_sessioncheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
     <title>Admin Dashoard</title>
 </head>
+
 <body>
-    <div class="container">
-    <?php include('inc_welcomemenu.php');?>
+    <?php include('inc_welcomemenu.php'); ?>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xxl-4">Form</div>
-            <div class="col-xxl-8">Display</div>
+                <?php include('inc_sidemenu.php'); ?>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+               
+            </main>
         </div>
-
-        <div class="col-xxl-12">Footer</div>
-
     </div>
-   
-    
+
 </body>
+
 </html>

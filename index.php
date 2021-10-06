@@ -18,42 +18,49 @@
         <div class="row">
             <!-- slider open -->
             <div class="col-xxl-6">
-                <img src="https://dummyimage.com/960x750/000/fff" alt="slider" class="img-fluid">
+                    <?php
+                    include('admin/dbconnection.php');
+
+                    $dataslider="SELECT * from blog order by id DESC limit 0,1";
+                    $query = mysqli_query($conn, $dataslider);
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                    <img src="<?=$row['featureimages'];?>" class="img-fluid" alt="<?=$row['title']; ?>">
+                        <h3><a href="blogdetails.php?id=<?=$row['id'];?>&cid=<?=$row['category_id'];?>"><?=$row['title']; ?></a></h3>
+                        <p><?=substr($row['content'], 0, 250); ?>
+                    <?php
+                    }
+                    
+                    ?>
+            
             </div>
             <!-- slider close -->
             <div class="col-xxl-6">
-                <div class="row">
+            <?php
+                    include('admin/dbconnection.php');
+
+                    $datainfour="SELECT * from blog order by id DESC limit 1,5";
+                    $query = mysqli_query($conn, $datainfour);
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+
+                        <div class="row">
                     <div class="col-xxl-3 col-lg-6 col-md-6">
-                        <img src="https://dummyimage.com/150x150/000/fff" alt="first image" class="img-fluid img-thumbnail">
+                    <img src="<?=$row['featureimages'];?>" class="img-fluid img-thumbnail" alt="<?=$row['title']; ?>">
                     </div>
                     <div class="col-xxl-9 col-lg-6 col-md-6">
-                        description
+                    <h4><a href="blogdetails.php?id=<?=$row['id'];?>&cid=<?=$row['category_id'];?>"><?=$row['title']; ?></a> </h4>
+                    <p><?=substr($row['content'], 0, 150); ?>
+
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xxl-3 col-lg-6 col-md-6">
-                        <img src="https://dummyimage.com/150x150/000/fff" alt="second image" class="img-fluid img-thumbnail">
-                    </div>
-                    <div class="col-xxl-9 col-lg-6 col-md-6">
-                        description
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xxl-3 col-lg-6 col-md-6">
-                        <img src="https://dummyimage.com/150x150/000/fff" alt="third image" class="img-fluid img-thumbnail">
-                    </div>
-                    <div class="col-xxl-9 col-lg-6 col-md-6">
-                        description
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xxl-3 col-lg-6 col-md-6">
-                        <img src="https://dummyimage.com/150x150/000/fff" alt="fourth image" class="img-fluid img-thumbnail">
-                    </div>
-                    <div class="col-xxl-9 col-lg-6 col-md-6">
-                        description
-                    </div>
-                </div>
+
+                    <?php
+                    }
+                    
+                    ?>
+               
+              
             </div>
 
             <div class="row">
