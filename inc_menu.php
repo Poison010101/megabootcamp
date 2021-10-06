@@ -1,6 +1,6 @@
 
  <div class="row">
-            <div class="col-xxl-12">
+            <div class="col-xxl-12 pb-3">
                 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
                     <div class="container-fluid">
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,20 @@
                               Categories
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <?php
+                    include('admin/dbconnection.php');
+
+                    $datainfour="SELECT * from category order by id DESC";
+                    $query = mysqli_query($conn, $datainfour);
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                    <li><a href="category.php?id=<?=$row['id'];?>" class="dropdown-item"><?=$row['name']; ?></a> </li>
+
+                    <?php
+                    }
+                    
+                    ?>
+                            
                             </ul>
                           </li>
                           <li class="nav-item">

@@ -1,8 +1,8 @@
 <div class="row">
-            <div class="col-xxl-2">
-                <img src="https://dummyimage.com/150x150/000/fff" alt="logo">
+            <div class="col-xxl-2 p-2">
+                <img src="images/logo.png" alt="logo" class="img-fluid">
             </div>
             <div class="col-xxl-10">
-                <img src="https://dummyimage.com/1250x150/000/fff" alt="banner" class="img-fluid">
+                <img src="images/banner.gif" alt="banner" class="mt-5 img-fluid" >
             </div>
         </div>

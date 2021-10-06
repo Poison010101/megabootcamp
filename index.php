@@ -62,36 +62,32 @@
                
               
             </div>
+                    <hr class="mt-3">
+            <div class="row mt-3">
+            <?php
+                    include('admin/dbconnection.php');
 
-            <div class="row">
+                    $datainfour="SELECT * from category order by id DESC limit 0,4";
+                    $query = mysqli_query($conn, $datainfour);
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                    
                 <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <img src="https://dummyimage.com/310x310/000/fff" alt="first image" class="img-fluid img-thumbnail rounded-circle">
-                        <h3>Title</h3>
-                        <p>description</p>
+                        <img src="<?=$row['thumbnail'];?>" class="img-fluid img-thumbnail rounded-circle" alt="<?=$row['name']; ?>">
+                        <h4 class="text-center"><a href="category.php?id=<?=$row['id'];?>"><?=$row['name']; ?></a> </h4>
+                    <p class="text-center"><?=substr($row['description'], 0, 150); ?>
 
                 </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                    <img src="https://dummyimage.com/310x310/000/fff" alt="first image" class="img-fluid img-thumbnail rounded-circle">
-                    <h3>Title</h3>
-                    <p>description</p>
 
-                </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                <img src="https://dummyimage.com/310x310/000/fff" alt="first image" class="img-fluid img-thumbnail rounded-circle">
-                <h3>Title</h3>
-                <p>description</p>
-
-                </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                <img src="https://dummyimage.com/310x310/000/fff" alt="first image" class="img-fluid img-thumbnail rounded-circle">
-                <h3>Title</h3>
-                <p>description</p>
-
-                </div>
+                    <?php
+                    }
+                    
+                    ?>
             </div>
-           <?php require_once('inc_footer.php');?>
+            <?php require_once('inc_footer.php');?>
         </div>
     </div>
+
 
 <script src="js/bootstrap.js" ></script>
     </body>
